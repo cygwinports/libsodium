@@ -1,0 +1,17 @@
+NAME="libsodium"
+VERSION=1.0.8
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Sodium crypto library"
+DESCRIPTION="Sodium is a modern, easy-to-use software library for encryption,
+decryption, signatures, password hashing and more.  It is a portable,
+cross-compilable, installable, packageable fork of NaCl, with a compatible
+API, and an extended API to improve usability even further."
+HOMEPAGE="https://download.libsodium.org/doc/"
+SRC_URI="https://download.libsodium.org/libsodium/releases/libsodium-${VERSION}.tar.gz"
+
+PKG_NAMES="libsodium18 libsodium-devel"
+libsodium18_CONTENTS="usr/bin/cygsodium-18.dll usr/share/doc/"
+libsodium_devel_CONTENTS="usr/include/sodium* usr/lib/libsodium.dll.a usr/lib/pkgconfig/libsodium.pc"
+
+MAKEOPTS+=" defexec_DATA= "
